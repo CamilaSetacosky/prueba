@@ -1,0 +1,311 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: roboto, sans serif;
+}
+
+/******HEADER******/
+
+header{
+    display: flex;
+    background-color: #fff;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    height: 12vh;
+    position: sticky;
+    top:0; 
+    width: 100%;
+    z-index: 1;
+}
+
+nav ul{
+    display: flex;
+    list-style-type: none;
+}
+
+nav ul li a{
+    text-decoration: none;
+    padding: 1rem; 
+    color: black;
+}
+
+.active a{
+    text-decoration:underline;
+    color:#f28482;
+}
+
+/******MAIN******/
+.main-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 78vh;
+    grid-template-areas: "imagen-fondo";  
+}
+
+.imagen-fondo{
+    grid-area: imagen-fondo;
+    background-image: url(../images/imagen-fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /*position: relative;*/
+}
+
+/*.imagen-fondo::before{
+    content:'';
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(255, 255, 255, 0.445);
+
+}
+*/
+
+.imagen-fondo h1{
+    font-size: 60px;
+}
+
+.imagen-fondo p{
+    margin-top: 1rem;
+    font-size: 30px;
+}
+
+.button{
+    grid-area: button;
+    width: 120px;
+    height: 41px;
+    border-radius: 20px;
+    margin-top: 1.5rem;
+    background-color: #84a59d;
+    color: #fff;
+    justify-self: center;
+    border: none;
+    font-size: 15px;
+}
+
+/*.imagen-fondo a{
+    z-index: 1;
+}*/
+
+/******FOOTER******/
+
+.footer{
+    display: flex;
+    background-color:#fff;
+    justify-content: space-evenly;
+    align-items:center;
+    flex-direction: column;
+    height: 10vh;
+    text-align: center;
+}
+
+.redes{
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+}
+
+.redes a{
+    color: black;
+}
+
+/*PRODUCTOS*/
+
+.main-productos-grid{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5vh 73vh;
+    grid-template-areas: "titulo"
+                         "productos"; 
+    gap: 10px; 
+}
+
+.titulo{
+    display: flex;
+    grid-area: titulo;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.productos{
+    grid-area: productos;
+    background-color:#fff;
+}
+
+.productos-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: "producto1 producto2 producto3"
+                         "producto1 producto4 producto5";
+    gap: 10px; 
+}
+
+.producto1{
+    grid-area: producto1;
+    background-image: url(../images/producto1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 20px;
+}
+
+.producto2{
+    grid-area: producto2;
+    background-image: url(../images/producto2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 20px;
+}
+
+.producto3{
+    grid-area: producto3;
+    background-image: url(../images/producto3.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 20px;
+    
+}
+
+.producto4{
+    grid-area: producto4;
+    background-image: url(../images/producto4.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 20px;
+}
+
+.producto5{
+    grid-area: producto5;
+    background-image: url(../images/producto5.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 20px;
+}
+/*MEDIA QUERIES inicio*/
+
+@media screen and (max-width: 768px){
+
+    .imagen-fondo h1{
+        font-size: 30px;
+    }
+    
+    .imagen-fondo p{
+        margin-top: 0.5rem;
+        font-size: 15px;
+    }
+
+}
+
+@media screen and (max-width: 480px){
+
+    .imagen-fondo{
+        background-image: none;
+    }
+    
+    .imagen-fondo h1{
+        font-size: 30px;
+    }
+    
+    .imagen-fondo p{
+        margin-top: 0.5rem;
+        font-size: 15px;
+    }
+
+}
+
+/*MEDIA QUERIES productos*/
+
+@media screen and (max-width: 768px) {
+
+    .productos-grid{
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: "producto1 producto1"
+                             "producto2 producto3"
+                             "producto4 producto5";
+    }
+
+    .productos{
+        font-size: 15px;
+    }
+
+    .button{
+        width: 60px;
+        height: 20px;
+        border-radius: 10px;
+        margin-top: 0.5rem;
+    }
+
+    .footer{
+        font-size: 12px;
+    }
+
+    @media screen and (max-width: 480px){
+        .productos-grid{
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            grid-template-areas: "producto1"
+                                 "producto2"
+                                 "producto3"
+                                 "producto4" 
+                                 "producto5";
+        }
+
+        .producto1{
+            background-image: none;
+            box-shadow: 5px 5px 10px rgb(231, 231, 231);
+        }
+
+        .producto2{
+            background-image: none;
+            box-shadow: 5px 5px 10px rgb(231, 231, 231);
+        }
+
+        .producto3{
+            background-image: none;
+            box-shadow: 5px 5px 10px rgb(231, 231, 231);
+        }
+
+        .producto4{
+            background-image: none;
+            box-shadow: 5px 5px 10px rgb(231, 231, 231);
+        }
+
+        .producto5{
+            background-image: none;
+            box-shadow: 5px 5px 10px rgb(231, 231, 231);
+        }
+
+        .button{
+            background-color: #fff;
+        }
+
+    }
+
+    .button{
+        font-size: 10px;
+        background-color: #84a59d;
+    }
+
+}
