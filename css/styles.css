@@ -202,6 +202,58 @@ nav ul li a{
     background-position: center center;
     border-radius: 20px;
 }
+
+/*ANIMACIONES*/
+
+.button:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+} 
+
+.producto1 {
+    transition: transform .3s;
+}
+
+.producto1:hover {
+    transform: scale(1.1) translateY(-40px);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+} 
+
+.producto2 {
+    transition: transform .3s;
+}
+
+.producto2:hover {
+    transform: scale(1.1) translateY(-40px);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+} 
+
+.producto3 {
+    transition: transform .3s;
+}
+
+.producto3:hover {
+    transform: scale(1.1) translateY(-40px);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+} 
+
+.producto4 {
+    transition: transform .3s;
+}
+
+.producto4:hover {
+    transform: scale(1.1) translateY(-40px);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+} 
+
+.producto5 {
+    transition: transform .3s;
+}
+
+.producto5:hover {
+    transform: scale(1.1) translateY(-40px);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
+} 
+
 /*MEDIA QUERIES inicio*/
 
 @media screen and (max-width: 768px){
